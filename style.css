@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inria Sans", serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 2vw;
+}
+header img{
+    padding-right: 1vw;
+    height: 5vw;
+}
+header h1{
+    font-size: 3vmax;
+}
+#launch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vmax;
+}
+#launch :nth-child(1){
+    font-size: 5vmax;
+    font-weight: bold;
+}
+#launch :nth-child(2){
+    font-size: 2.8vmax;
+    font-weight: 100;
+}
+
+#timer{
+    padding-top: 3vmax;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#timer #time span{
+    font-size: 5vmax;
+    padding:0 3vmax;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Shortly!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="./assets/hyuga.png" alt="Hyuga img icon">
+            <h1>Hyuga</h1>
+        </header>
+
+        <div id="launch">
+            <p>Launching Soon!</p>
+            <p>Under Construction (But Worth the Wait)</p>
+        </div>
+
+        <div id="timer">
+            <div id="time">
+                <span id="days">00</span>
+                <p>Days</p>
+            </div>
+
+            <div id="time">
+                <span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+
+            <div id="time">
+                <span id="mins">00</span>
+                <p>Minutes</p>
+            </div>
+
+            <div id="time">
+                <span id="secs">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let countdown = new Date("March 7, 2025 00:00:00").getTime();
+        let x = setInterval(()=>{
+            let timeNow = new Date().getTime();
+            let stop = countdown - timeNow;
+
+
+            let days = Math.floor(stop / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((stop % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((stop % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((stop % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("mins").innerHTML = minutes;
+            document.getElementById("secs").innerHTML = seconds;
+        },1000)
+    </script>
+</body>
+</html>
